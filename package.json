@@ -2,7 +2,7 @@
   "name": "testfrontendlocaweb",
   "version": "1.0.0",
   "description": "Teste de Front-End Locaweb",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
     "start:dev": "webpack-server",
     "build": "webpack",
