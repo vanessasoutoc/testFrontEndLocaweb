@@ -5,8 +5,11 @@ import $ from 'jquery';
 function appendListProducts(product){
   var item = `<li>
   <div class="wrapimg">
-      <img src=${product.image} style="width:230px;"/>
-      <div class="addPro"> <a class="addCard" id=${product.id} >+ Add to shopping cart</a> 
+      <div style="background-image: url('${product.image}')">
+        <!--<img src=${product.image} style="width:230px;height: auto;"/>-->
+      </div>
+      <div class="addPro"> 
+      <a class="addCard" id=${product.id} >+ Add to shopping cart</a> 
       </div>
   </div>
   <div class="titlePro">	<a href="">${product.description}</a>
@@ -19,6 +22,7 @@ function appendListProducts(product){
 
   $('.list-products').append(item);
 }
+
 $('.addCard').on((e)=>{
   console.log(e)
 });
@@ -26,8 +30,21 @@ $('.addCard').on((e)=>{
 $('.list-products').on('click', '.addCard', function(){
   console.log(this.id);
   var product = getProduct(this.id);
-  addCard(product)
+  addCard(product);
+
+  var listProduct = JSON.parse(localStorage.getItem('allProducts'));
+  removeQuantityProduct(listProduct, this.id);
 });
+
+function removeQuantityProduct(obj, id) {
+  obj.products.forEach(el => {
+    if(el.id === id){
+      el.quantity -= 1;
+    }
+  });
+  console.log('prods', obj);
+  localStorage.setItem('allProducts', JSON.stringify(obj));
+}
 
 
 function getProduct(id){

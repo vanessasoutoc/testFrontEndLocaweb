@@ -13,10 +13,14 @@ async function getProducts(){
   var products = await allProducts();
   if (idListProducts === null || idListProducts != products.id) {
     localStorage.setItem('allProducts', JSON.stringify(products));
+  } else {
+    products = JSON.parse(localStorage.getItem('allProducts'));
   }
-  
+  console.log('products', products);
   products.products.forEach(product => {
-    appendListProducts(product);
+    if(product.quantity >= 1){
+      appendListProducts(product);
+    }
   });
 }
 
