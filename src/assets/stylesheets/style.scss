@@ -1,4 +1,4 @@
-$bg-color: pink;
+$bg-color: #fffff;
 
 * {
   margin: 0;
@@ -11,9 +11,11 @@ body {
 ul {
   list-style: none;
 }
+
 .wrapper {
-  width: 700px;
-  margin: 20px auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
 }
 /* products */
 .products {
