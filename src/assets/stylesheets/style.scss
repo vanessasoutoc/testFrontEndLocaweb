@@ -14,6 +14,7 @@ ul {
 .wrapper {
   width: 700px;
   margin: 20px auto;
+  display: flex;
 }
 /* products */
 .products {
@@ -188,6 +189,11 @@ ul {
 }
 .icon-list {
   background: url("http://cdn3.iconfinder.com/data/icons/other-icons/48/list-32.png") no-repeat 0 0;
+  height: 32px;
+  width: 32px;
+}
+.icon-card {
+  background: url("../images/ecard-32.png") no-repeat 0 0;
   height: 32px;
   width: 32px;
 }

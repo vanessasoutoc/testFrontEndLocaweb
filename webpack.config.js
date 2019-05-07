@@ -20,6 +20,10 @@ let config = {
       template: './src/index.html',
       minify: false
     }),
+    new HtmlWebpackPlugin({
+      template: './src/card.html',
+      filename: 'card.html'
+    }),
     new MiniCssExtractPlugin({
       filename: 'styles.css'
     })
@@ -36,6 +40,18 @@ let config = {
         'css-loader',
         'sass-loader'
       ]
+    },{
+      test: /\.(gif|png|jpe?g|svg)$/i,
+      use: [
+        'file-loader',
+        {
+          loader: 'image-webpack-loader',
+          options: {
+            bypassOnDebug: true, // webpack@1.x
+            disable: true, // webpack@2.x and newer
+          },
+        },
+      ],
     }]
   },
   devServer: {

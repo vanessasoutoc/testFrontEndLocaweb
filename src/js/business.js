@@ -1,6 +1,12 @@
-'use strict';
-
 import $ from 'jquery';
+
+function addProducts(products){
+  products.products.forEach(product => {
+    if(product.quantity >= 1){
+      appendListProducts(product);
+    }
+  });
+}
 
 function appendListProducts(product){
   var item = `<li>
@@ -9,7 +15,7 @@ function appendListProducts(product){
         <!--<img src=${product.image} style="width:230px;height: auto;"/>-->
       </div>
       <div class="addPro"> 
-      <a class="addCard" id=${product.id} >+ Add to shopping cart</a> 
+      <a class="addCard" id=${product.id} > + Add ao carrinho</a> 
       </div>
   </div>
   <div class="titlePro">	<a href="">${product.description}</a>
@@ -23,12 +29,7 @@ function appendListProducts(product){
   $('.list-products').append(item);
 }
 
-$('.addCard').on((e)=>{
-  console.log(e)
-});
-
 $('.list-products').on('click', '.addCard', function(){
-  console.log(this.id);
   var product = getProduct(this.id);
   addCard(product);
 
@@ -42,10 +43,9 @@ function removeQuantityProduct(obj, id) {
       el.quantity -= 1;
     }
   });
-  console.log('prods', obj);
+  
   localStorage.setItem('allProducts', JSON.stringify(obj));
 }
-
 
 function getProduct(id){
   var products = JSON.parse(localStorage.getItem('allProducts'));
@@ -55,7 +55,23 @@ function getProduct(id){
 }
 
 function addCard(product){
-  localStorage.setItem('card', JSON.stringify(product));
+  var card = JSON.parse(localStorage.getItem('card'));
+  if (card === null) {
+    product[0].quantity = 1;
+    localStorage.setItem('card', JSON.stringify(product));
+  } else {
+    for (var x in card){
+      if(card[x].id === product[0].id) {
+        card[x].quantity += 1;
+      } else {
+        card.push(product[0]);
+        break;
+      }
+      break;
+    }
+    localStorage.setItem('card', JSON.stringify(card));
+  }
+  window.location.reload();
 }
 
-export { appendListProducts };
+export { addProducts };
