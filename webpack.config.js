@@ -1,10 +1,10 @@
-const path = require('path');
-      CleanWebpackPlugin = require('clean-webpack-plugin'),
-      HtmlWebpackPlugin = require('html-webpack-plugin'),
-      MiniCssExtractPlugin = require('mini-css-extract-plugin'),
-      OptimizeCSSAssets = require('optimize-css-assets-webpack-plugin'),
-      DashboardPlugin = require('webpack-dashboard/plugin'),
-      devMode = process.env.NODE_ENV === 'development';
+const path = require('path'),
+  CleanWebpackPlugin = require('clean-webpack-plugin'),
+  HtmlWebpackPlugin = require('html-webpack-plugin'),
+  MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+  OptimizeCSSAssets = require('optimize-css-assets-webpack-plugin'),
+  DashboardPlugin = require('webpack-dashboard/plugin'),
+  devMode = process.env.NODE_ENV === 'development';
 
 
 let config = {
