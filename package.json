@@ -14,7 +14,11 @@
     "url": "git+https://github.com/vanessasoutoc/testFrontEndLocaweb.git"
   },
   "jest": {
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$"
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$",
+    "setupFiles": [
+      "./test/localStorageMocks"
+    ],
+    "verbose": true
   },
   "keywords": [
     "test",
@@ -34,8 +38,8 @@
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/plugin-transform-runtime": "^7.4.4",
-    "@babel/runtime": "^7.0.0-beta.55",
     "@babel/preset-env": "^7.4.4",
+    "@babel/runtime": "^7.0.0-beta.55",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^0.28.11",
@@ -43,6 +47,8 @@
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^4.6.0",
     "jest": "^24.8.0",
+    "jest-localstorage-mock": "^2.4.0",
+    "localStorage": "^1.0.4",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",

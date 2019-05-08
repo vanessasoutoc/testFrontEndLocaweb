@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import localStorage from 'localStorage';
 
 function addProducts(products){
   products.products.forEach(product => {
@@ -111,4 +112,4 @@ function addCar(product, unity){
   window.location.reload();
 }
 
-export { addProducts };
+export { addProducts, getProduct, addCar };
