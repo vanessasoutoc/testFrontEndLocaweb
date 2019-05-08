@@ -19,7 +19,7 @@ function appendListCars(car){
       <a class="addCar" id=${car.id} > + Add ao carrinho</a> 
       </div>
   </div>
-  <div class="titlePro">
+  <div class="cars-titlePro">
     <a class="icon-remove removeItemCar" id="${car.id}" style="float:right"></a>
     <a href="">${car.description}</a>
     <input type="text" class="${car.id}" readonly value="${car.quantity}"/><br>

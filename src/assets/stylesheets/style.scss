@@ -12,6 +12,12 @@ ul {
   list-style: none;
 }
 
+.navbar {
+  justify-content: center;
+  display: flex;
+  flex-direction: row; 
+}
+
 .wrapper {
   justify-content: center;
   display: flex;
@@ -174,32 +180,37 @@ ul {
 .titlePro span {
   color: #a20000;
 }
-.view p  { top: 5px; margin: 0 10px 0 0; } 
+.view p  { top: 25%; margin: 0 10px 0 0; } 
 .view p,
 .view a { 
-  float: left; 
+  justify-content: flex-end;
   display: inline-block;
   text-decoration: none;
   position: relative;
 }
 .icon-grid {
-  background: url("http://cdn1.iconfinder.com/data/icons/jigsoar-icons/16/_thumbnail.png") no-repeat 0 0;
-  height: 16px;
-  width: 16px;
-  top: 7px;
+  background: url("../images/006-menu.png") no-repeat 0 0;
+  background-size: 90%;
+  height: 32px;
+  width: 32px;
+  top:2px;
+  margin-right: 5px;
 }
 .icon-list {
-  background: url("http://cdn3.iconfinder.com/data/icons/other-icons/48/list-32.png") no-repeat 0 0;
+  background: url("../images/005-list.png") no-repeat 0 0;
   height: 32px;
   width: 32px;
+  margin-right: 5px;
 }
 .icon-card {
-  background: url("../images/ecard-32.png") no-repeat 0 0;
+  background: url("../images/001-shopping-cart.png") no-repeat 0 0;
   height: 32px;
   width: 32px;
+  margin-right: 5px;
 }
 .icon-remove {
-  background: url("../images/ecard-32.png") no-repeat 0 0;
+  background: url("../images/003-delete.png") no-repeat 0 0;
   height: 32px;
   width: 32px;
+  margin-right: 5px;
 }
