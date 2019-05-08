@@ -27,9 +27,6 @@
   border: 0;
   background: transparent;
 }
-.cars .list li:hover .titlePro {
-  border: 0;
-}
 .cars .list li .titlePro a {
   padding: 0 0 5px 0;
 }
@@ -91,14 +88,4 @@
   left: 0;
   right: 0;
   bottom: 0;
-}
-.cars ul li:hover .addPro, .cars ul li:hover .addPro a {
-  opacity: 1;
-}
-.cars ul li:hover .titlePro {
-  border: 1px solid rgba(51, 51, 51, 1);
-  border-top: 0;
-}
-.cars ul li:hover .titlePro a {
-  color: #010101;
 }

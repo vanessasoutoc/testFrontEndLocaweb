@@ -87,21 +87,26 @@ function getProduct(id){
 
 // function add product to car
 function addCar(product, unity){
-  var card = JSON.parse(localStorage.getItem('card'));
-  if (card === null) {
+  var car = JSON.parse(localStorage.getItem('car'));
+
+  if (car === null) {
     product[0].quantity = unity;
-    localStorage.setItem('card', JSON.stringify(product));
+    localStorage.setItem('car', JSON.stringify(product));
   } else {
-    for (var x in card){
-      if(card[x].id === product[0].id) {
-        card[x].quantity += unity;
-      } else {
-        card.push(product[0]);
+    if(car.length > 0){
+      for (var x in car){
+        if(car[x].id === product[0].id) {
+          car[x].quantity += unity;
+        } else {
+          car.push(product[0]);
+          break;
+        }
         break;
       }
-      break;
+    } else {
+      car.push(product[0]);
     }
-    localStorage.setItem('card', JSON.stringify(card));
+    localStorage.setItem('car', JSON.stringify(car));
   }
   window.location.reload();
 }
