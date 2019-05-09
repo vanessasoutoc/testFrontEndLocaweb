@@ -2,7 +2,12 @@ import $ from 'jquery';
 import { allCars } from '../services/services';
 import { addCars } from '../business/cars';
 
-$('.view a').on('click', function(){
+$('a.list').on('click', function(){
+  $('.cars ul').toggleClass('list');
+  return false;
+});
+
+$('a.grid').on('click', function(){
   $('.cars ul').toggleClass('list');
   return false;
 });
