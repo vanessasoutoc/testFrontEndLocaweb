@@ -6,3 +6,5 @@ import './js/controllers/cars.js';
 import '../node_modules/flexboxgrid/css/flexboxgrid.min.css';
 import './assets/stylesheets/style.scss';
 import './assets/stylesheets/cars.scss';
+import './views/products';
+import './views/cars';
