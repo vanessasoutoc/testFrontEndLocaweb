@@ -94,6 +94,7 @@ function addCar(product, unity){
     product[0].quantity = unity;
     localStorage.setItem('car', JSON.stringify(product));
   } else {
+    product[0].quantity = unity;
     if(car.length > 0){
       for (var x in car){
         if(car[x].id === product[0].id) {
