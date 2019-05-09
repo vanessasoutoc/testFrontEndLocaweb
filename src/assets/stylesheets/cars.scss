@@ -18,7 +18,7 @@
   width: 691px;
   height: 245px;
 }
-.cars .list li .titlePro {
+.cars .list li .cars-titlePro {
   float: left;
   position: relative;
   padding: 45px 0 20px 0;
@@ -27,15 +27,15 @@
   border: 0;
   background: transparent;
 }
-.cars .list li .titlePro a {
+.cars .list li .cars-titlePro a {
   padding: 0 0 5px 0;
 }
-.cars .list li .titlePro .descTitle {
+.cars .list li .cars-titlePro .descTitle {
   color: #333;
   text-transform: none !important;
   padding: 10px 0 0 0;
 }
-.cars .list li .titlePro p {
+.cars .list li .cars-titlePro p {
   color: #333;
   text-transform: none !important;
   width: 440px;
