@@ -26,3 +26,5 @@ async function getProducts(){
 }
 
 getProducts();
+
+export { getProducts };

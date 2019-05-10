@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 let localStorageMocker = (function () {
   var storage = {};
 

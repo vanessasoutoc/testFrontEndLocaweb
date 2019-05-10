@@ -14,6 +14,7 @@ $('a.grid').on('click', function(){
 
 async function getCars(){
   var cars = await allCars();
+  console.log(cars.length);
   addCars(cars);
 }
 
